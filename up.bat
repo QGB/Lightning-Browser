@@ -10,5 +10,5 @@ git remote add q https://github.com/qgb/%repo%
 git remote add cq https://coding.net/u/qgb/p/%repo%/git
 git add -A
 git commit -m %*
-git push cq master 
-git push q master 
+git push cq dev 
+git push q dev 
