@@ -69,9 +69,12 @@
 -dontwarn net.i2p.crypto.CertUtil
 -dontwarn org.apache.http.conn.ssl.DefaultHostnameVerifier
 
--dontwarn org.apache.http.HttpHost
+-dontwarn org.apache.*
 
 # Needed for okhttp
 -dontwarn okio.**
 -dontwarn javax.annotation.Nullable
 -dontwarn javax.annotation.ParametersAreNonnullByDefault
+
+-dontwarn  *
+-dontwarn  **.**

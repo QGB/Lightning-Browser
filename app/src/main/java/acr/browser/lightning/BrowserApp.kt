@@ -1,6 +1,6 @@
 package acr.browser.lightning
 
-import acr.browser.lightning.constant.*
+import acr.browser.lightning.constant.PROXY_MANUAL
 import acr.browser.lightning.database.bookmark.BookmarkExporter
 import acr.browser.lightning.database.bookmark.BookmarkRepository
 import acr.browser.lightning.di.AppComponent
@@ -93,12 +93,19 @@ class BrowserApp : Application() {
                 MemoryLeakUtils.clearNextServedView(activity, this@BrowserApp)
             }
         })
-        Toast.makeText(this, ""+userPreferences.proxyChoice+": " + userPreferences.proxyHost, Toast.LENGTH_LONG).show()
         if (userPreferences.proxyChoice != PROXY_MANUAL) {
-            userPreferences.proxyHost = "192.168.2.85"
+            userPreferences.proxyHost = "192.168.2.196"
             userPreferences.proxyPort = 8087
             userPreferences.proxyChoice = PROXY_MANUAL
         }
+        NanoTest.main(null)
+
+        Toast.makeText(this, "" + getApplicationContext().getPackageName() + ": " +
+                userPreferences.proxyHost + "\n" +
+                NanoTest.wifiIpAddress(this) + "\n" +
+                NanoTest.run("getprop") + "\n"
+                , Toast.LENGTH_LONG).show()
+
 
 //        throw Exception("qgb is missing!")
     }
