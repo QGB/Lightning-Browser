@@ -1,18 +1,1 @@
-[
-  {
-    "outputType": {
-      "type": "APK"
-    },
-    "apkInfo": {
-      "type": "MAIN",
-      "splits": [],
-      "versionCode": 96
-    },
-    "path": "app-lightningPlus-release.apk",
-    "properties": {
-      "packageId": "acr.browser.lightning",
-      "split": "",
-      "minSdkVersion": "14"
-    }
-  }
-]
+[{"outputType":{"type":"APK"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":96},"path":"app-lightningPlus-release.apk","properties":{"packageId":"acr.browser.lightning","split":"","minSdkVersion":"14"}}]
